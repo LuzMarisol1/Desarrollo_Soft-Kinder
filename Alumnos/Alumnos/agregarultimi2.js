@@ -7,7 +7,25 @@ $(document).ready(function () {
         storageBucket: "datos-alumnos-8e303.appspot.com",
     };
     firebase.initializeApp(config); //inicializamos firebase
-
+    
+    window.onload = function () {
+        firebase.auth().onAuthStateChanged(function (user) {
+          if(user==null){
+            location.href = "/education/index.html"; //si el usuario es null redirecciona al index
+          }
+        });
+      }
+      function cerrar(){
+        firebase.auth().signOut()
+        .then(function(){
+          console.log("Salir");
+        })
+        .catch(function(error){
+          console.log(error);
+        });
+        location.href = "/education/index.html";
+      }
+      
     var filaEliminada; //para capturara la fila eliminada
     var filaEditada; //para capturara la fila editada o actualizada
 
