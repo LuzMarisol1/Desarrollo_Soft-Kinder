@@ -134,9 +134,10 @@ button {
   font-size: 14px;
   color: #fff;
   font-weight: bold;
-  text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
   overflow: hidden;
   outline: none;
+  background-color: rgb(54, 165, 54);
 }
 
 button.submitbtn {
@@ -147,11 +148,13 @@ button.submitbtn {
   cursor: pointer;
   color: #fff;
 }
+
 button.submitbtn:hover {
   background-image: -moz-linear-gradient(#8ab959, #7eaf4a);
   background-image: -webkit-linear-gradient(#8ab959, #7eaf4a);
   background-image: linear-gradient(#8ab959, #7eaf4a);
 }
+
 button.submitbtn:active {
   height: 34px;
   border-bottom: 0;
@@ -177,4 +180,15 @@ button.submitbtn:active {
   .col-4 { width: 25% }
   
   .col-submit button { width: 30%; margin: 0 auto; }
+}
+
+.conte a {
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+  background:rgb(54, 165, 54);
+  padding: 8px 20px;
+  border-radius: 30px;
+  margin: 20px;
+  transition: background-color 1s;
 }

@@ -28,7 +28,7 @@ function reinscripcion() {
         alert("Registrado correctamente");
         location.href="/education/index.html";
     } else {
-        alert("Error: alguno de los campos está vacio");
+        alert("Error: Algunos campos se encuentran vacios");
     }
 }
 
