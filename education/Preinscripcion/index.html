@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html">
+  <title>Preinscripción</title>
+  <meta name="author" content="Jake Rocheleau">
+  <link rel="shortcut icon" href="http://static.tmimgcdn.com/img/favicon.ico">
+  <link rel="icon" href="http://static.tmimgcdn.com/img/favicon.ico">
+  <link rel="stylesheet" type="text/css" media="all" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" media="all" href="css/switchery.min.css">
+  <script type="text/javascript" src="js/switchery.min.js"></script>
+</head>
+
+<body>
+  <div id="wrapper">
+
+    <h1>Preinscripcion</h1>
+    <h2>Datos del aspirante</h2>
+
+    <form>
+      <div class="col-2">
+        <label>
+          Nombres:
+          <input id="nombre" placeholder="Ingresar Nombres" pattern="[A-Z ]+" required=""
+            onkeyup="this.value = this.value.toUpperCase();" tabindex="1">
+        </label>
+      </div>
+      <div class="col-2">
+        <label>
+          Apellidos
+          <input id="apellido" placeholder="Ingresar Apellidos" pattern="[A-Z ]+" required=""
+            onkeyup="this.value = this.value.toUpperCase();" tabindex="2">
+        </label>
+      </div>
+
+      <div class="col-3">
+        <label>
+          Edad
+          <input id="edad" type="number" placeholder="Ingresar Edad" min="1" max="100" required="" tabindex="3">
+        </label>
+      </div>
+      <div class="col-3">
+        <label>
+          Direccion
+          <input id="direccion" placeholder="Ingresar Dirección" onkeyup="this.value = this.value.toUpperCase();"
+            required="" tabindex="4">
+        </label>
+      </div>
+      <div class="col-3">
+        <label>
+          Telefono
+          <input id="telefono"  type=" text" placeholder="Ingresar Telefono" pattern="[0-9]{10}" required=""
+            tabindex="4">
+        </label>
+      </div>
+
+
+      <div class="col-4">
+        <label>
+          CURP
+          <input id="curp" type="text" placeholder="Ingresar Curp" onkeyup="this.value = this.value.toUpperCase();"
+            pattern="([A-Z]{4}([0-9]{2})(0[1-9]|1[0-2])(0[1-9]|1[0-9]|2[0-9]|3[0-1])[HM](AS|BC|BS|CC|CL|CM|CS|CH|DF|DG|GT|GR|HG|JC|MC|MN|MS|NT|NL|OC|PL|QT|QR|SP|SL|SR|TC|TS|TL|VZ|YN|ZS|NE)[A-Z]{3}[0-9A-Z]\d)"
+            required="" tabindex="6">
+        </label>
+      </div>
+      <div class="col-4">
+        <label>
+          FECHA DE REGISTRO
+          <input id="fecha" type="date" placeholder="Ingresar Fecha de Registro" required="" tabindex="7">
+        </label>
+      </div>
+      <div class="col-4">
+        <label>
+          TUTOR
+          <input id="tutor" placeholder="Ingresar Nombre del Tutor" pattern="[A-Z ]+" required=""
+            onkeyup="this.value = this.value.toUpperCase();" tabindex="7">
+        </label>
+      </div>
+      <button class="boton" id="btnRegistrar">Registrar</button>
+      </div>
+
+    </form>
+  </div>
+  <script type="text/javascript">
+    var elems = Array.prototype.slice.call(document.querySelectorAll('.js-switch'));
+
+    elems.forEach(function (html) {
+      var switchery = new Switchery(html);
+    });
+  </script>
+
+  <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-database.js"></script>
+
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+   https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-analytics.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+      apiKey: "AIzaSyBZDfZ0luh_1ZV5-wYLTgtIdPsDIckWA50",
+      authDomain: "datos-alumnos-8e303.firebaseapp.com",
+      projectId: "datos-alumnos-8e303",
+      storageBucket: "datos-alumnos-8e303.appspot.com",
+      messagingSenderId: "114024798394",
+      appId: "1:114024798394:web:b46ef9a11da308f45e0a83",
+      measurementId: "G-J69HR767JN"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
+  <script src="/education/Preinscripcion/js/preinscripcion.js"></script>
+</body>
+
+</html>

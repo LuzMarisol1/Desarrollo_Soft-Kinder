@@ -1,0 +1,84 @@
+/* PARTE GENERAL DE LA PAGINA */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: white;
+    font-family: 'calibri';
+    background: #072446;
+    margin: auto;
+}
+
+/* ENCABEZADO */
+
+header {
+    /*background:url(/img/Colorcard-hex_071746-www.colorbook.io.png);*/
+    /*background: #0a2f58;*/
+    background: url(/Contacto/img/WhatsApp\ Image\ 2021-01-05\ at\ 22.30.46.jpeg);
+    height: 250px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 10px;
+    margin-left: 40px;
+    margin-right: 40px;
+    display: grid;
+}
+
+.conte {
+    text-align: center;
+}
+
+/* TAMAÑO DE LA LETRA DE CONTACTO, ASI COMO EL MARGEN SEPARADO DE LA BARRA DE NAVEAGCIÓN*/
+
+.conte p {
+    font-size: 70px;
+    font-weight: bold;
+    margin: 40px 0px;
+    text-shadow: 3px 3px 1px black, 5px 5px 2px black, 8px 8px 3px black;
+}
+
+/* BARRA DE NAVEGACIÓN */
+
+.conte a {
+    font-size: 17px;
+    color: white;
+    text-decoration: none;
+    background: #04aed9;
+    padding: 8px 20px;
+    border-radius: 30px;
+    text-align: center;
+    margin: 20px;
+}
+
+/*                       FIN DEL ENCABEZADO                     */
+
+/*                      TABLA                                    */
+
+#contenido {
+    width: 1200px;
+    height: 100%;
+    float: left;
+    margin-top: 15px;
+    margin-left: 90px;
+}
+
+table {
+    table-layout: fixed;
+    width: 250px;
+}
+
+th {
+    color: white;
+    text-align: left;
+    font-size: 24px;
+    width: 100px;
+    word-wrap: break-word;
+}
+
+thead {
+    text-align: center;
+}

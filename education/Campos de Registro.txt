@@ -1,0 +1,20 @@
+redireccion en los dos botones del carrousel
+
+-Preinscripcion
+Nombre
+Apellidos
+Edad
+Direccion
+Telefono
+CRUP
+Fecha
+Nombre de tutor 
+
+
+-Reinscripción
+Nombre
+Apellidos
+Edad
+Direccion
+Campo de subida de boleta (archivo)
+

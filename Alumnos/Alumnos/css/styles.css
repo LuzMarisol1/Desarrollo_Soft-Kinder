@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: black;
+    font-family: 'calibri';
+    margin: auto;
+    background-color:white;
+}
+
+title {
+    color: black;
+    text-align: center;
+    font-size: 30px;
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.container {
+    margin-left: 280px;
+    margin-top: 80px;
+}

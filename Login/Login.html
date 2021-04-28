@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset='utf-8'>
+
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+
+    <title>Inicio de sesión</title>
+
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+
+    <link rel="stylesheet" href="/Login/style.css">
+</head>
+
+<body>
+    <div class="for">
+        <!--Saludo que aparecera en el contenedor-->
+        <h2 id="titulo">¡Buen día, profesor!</h2>
+
+        <!--Titulos de el usuario y contraseña del administrador-->
+        <p class="titulos">Email</p>
+
+        <input id="email" type="email" placeholder="Ingrese email" required>
+
+        <p class="tit">Contraseña</p>
+
+        <input id="contrasena" type="password" placeholder="Ingresa contraseña" required>
+
+        <!--Boton de inicio de sesión-->
+        <div class="boton">
+
+            <button type="button" value="Acceder" onclick="ingreso()">Acceder</button>
+
+        </div>
+
+        <div id="contenido"></div>
+
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-auth.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+  https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
+        var firebaseConfig = {
+            apiKey: "AIzaSyBZDfZ0luh_1ZV5-wYLTgtIdPsDIckWA50",
+            authDomain: "datos-alumnos-8e303.firebaseapp.com",
+            projectId: "datos-alumnos-8e303",
+            storageBucket: "datos-alumnos-8e303.appspot.com",
+            messagingSenderId: "114024798394",
+            appId: "1:114024798394:web:b46ef9a11da308f45e0a83",
+            measurementId: "G-J69HR767JN"
+
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+    <script src="/Login/app.js"></script>
+</body>
+
+</html>
