@@ -38,6 +38,19 @@ firebase.database().ref("preinscripcion").once('value').then(function (snapshot)
         preinscrito += '<td>';
         preinscrito += data[k].edad + '</td>';
 
+        preinscrito += '<td>';
+        preinscrito += data[k].direccion + '</td>';
+
+        preinscrito += '<td>';
+        preinscrito += data[k].telefono + '</td>';
+
+        preinscrito += '<td>';
+        preinscrito += data[k].curp + '</td>';
+
+        preinscrito += '<td>';
+        preinscrito += data[k].tutor + '</td>';
+
+
         preinscrito += ' <td> ';
         preinscrito += data[k].estatus + '</td>';
 

@@ -6,6 +6,8 @@ $(document).ready(function () {
         projectId: "datos-alumnos-8e303",
         storageBucket: "datos-alumnos-8e303.appspot.com",
     };
+
+    
     firebase.initializeApp(config); //inicializamos firebase
 
     var filaEliminada; //para capturara la fila eliminada
@@ -40,7 +42,7 @@ $(document).ready(function () {
                 "previous": "Anterior"
             }
         },
-        pageLength: 5,
+        pageLength: 10,
         lengthMenu: [[5, 10, 20, -1], [5, 10, 20, 'Todos']],
         data: dataSet,
         columnDefs: [
@@ -57,11 +59,11 @@ $(document).ready(function () {
     });
 
     coleccionProductos.on("child_added", datos => {
-        dataSet = [datos.key, datos.child("nombre").val(), datos.child("apellido").val(), datos.child("edad").val(), datos.child("estatus").val()];
+        dataSet = [datos.key, datos.child("nombre").val(), datos.child("apellido").val(), datos.child("edad").val(), datos.child("direccion").val(), datos.child("telefono").val(), datos.child("curp").val(), datos.child("estatus").val()];
         table.rows.add([dataSet]).draw();
     });
     coleccionProductos.on('child_changed', datos => {
-        dataSet = [datos.key, datos.child("nombre").val(), datos.child("apellido").val(), datos.child("edad").val(), datos.child("estatus").val()];
+        dataSet = [datos.key, datos.child("nombre").val(), datos.child("apellido").val(), datos.child("edad").val(), datos.direccion.child("direccion").val(), datos.telefono.child("telefono").val(), datos.curp.child("curp").val(), datos.child("estatus").val()];
         table.row(filaEditada).data(dataSet).draw();
     });
     coleccionProductos.on("child_removed", function () {
@@ -75,14 +77,18 @@ $(document).ready(function () {
         let nombre = $.trim($('#nombre').val());
         let apellido = $.trim($('#apellido').val());
         let edad = $.trim($('#edad').val());
+        let direccion = $.trim($('#direccion').val());
+        let telefono = $.trim($('#telefono').val());
+        let curp = $.trim($('#curp').val());
         let estatus = $.trim($('#estatus').val());
+
         let idFirebase = id;
         var productos = coleccionProductos.push();
         if (idFirebase == '') {
             idFirebase = productos.key;
         };
         //agregamos la extracción de la
-        data = { clave: productos.getKey(), nombre: nombre, apellido: apellido, edad: edad, estatus: estatus };
+        data = { clave: productos.getKey(), nombre: nombre, apellido: apellido, edad: edad, direccion: direccion, telefono:telefono, curp: curp, estatus: estatus };
         actualizacionData = {};
         actualizacionData[`/${idFirebase}`] = data;
         coleccionProductos.update(actualizacionData);
@@ -110,11 +116,19 @@ $(document).ready(function () {
         let nombre = $(this).closest('tr').find('td:eq(0)').text();
         let apellido = $(this).closest('tr').find('td:eq(1)').text();
         let edad = parseInt($(this).closest('tr').find('td:eq(2)').text());
-        let estatus = ($(this).closest('tr').find('td:eq(3)').text());
+        let direccion = ($(this).closest('tr').find('td:eq(3)').text());
+        let telefono = ($(this).closest('tr').find('td:eq(4)').text());
+        let curp = ($(this).closest('tr').find('td:eq(5)').text());
+        let estatus = ($(this).closest('tr').find('td:eq(6)').text());
+        
+
         $('#id').val(id);
         $('#nombre').val(nombre);
         $('#apellido').val(apellido);
         $('#edad').val(edad);
+        $('#direccion').val(direccion);
+        $('#telefono').val(telefono);
+        $('#curp').val(curp);
         $('#estatus').val(estatus);
         $('#modalAltaEdicion').modal('show');
     });
