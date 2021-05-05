@@ -216,3 +216,18 @@ button.submitbtn:active {
     margin: 0 auto;
   }
 }
+
+  .conte{
+    margin-top: 50px;
+    margin-left: 50px;
+}
+.conte a {
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    background:rgb(50, 59, 141);
+    padding: 8px 20px;
+    border-radius: 30px;
+    margin: 20px;
+    transition: background-color 1s;
+  }
