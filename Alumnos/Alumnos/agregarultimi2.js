@@ -77,6 +77,7 @@ $(document).ready(function () {
         let apellido = $.trim($('#apellido').val());
         let edad = $.trim($('#edad').val());
         let estatus = $.trim($('#estatus').val());
+        
         let idFirebase = id;
         var productos = coleccionProductos.push();
         if (idFirebase == '') {

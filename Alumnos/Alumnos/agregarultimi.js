@@ -42,7 +42,7 @@ $(document).ready(function () {
                 "previous": "Anterior"
             }
         },
-        pageLength: 10,
+        pageLength: 5,
         lengthMenu: [[5, 10, 20, -1], [5, 10, 20, 'Todos']],
         data: dataSet,
         columnDefs: [
@@ -63,7 +63,7 @@ $(document).ready(function () {
         table.rows.add([dataSet]).draw();
     });
     coleccionProductos.on('child_changed', datos => {
-        dataSet = [datos.key, datos.child("nombre").val(), datos.child("apellido").val(), datos.child("edad").val(), datos.direccion.child("direccion").val(), datos.telefono.child("telefono").val(), datos.curp.child("curp").val(), datos.child("estatus").val()];
+        dataSet = [datos.key, datos.child("nombre").val(), datos.child("apellido").val(), datos.child("edad").val(), datos.child("direccion").val(), datos.child("telefono").val(), datos.child("curp").val(), datos.child("estatus").val()];
         table.row(filaEditada).data(dataSet).draw();
     });
     coleccionProductos.on("child_removed", function () {
@@ -94,7 +94,7 @@ $(document).ready(function () {
         coleccionProductos.update(actualizacionData);
         id = '';
         $("form").trigger("reset");
-        $('#modal1').modal('hide');
+        $('#modalAltaEdicion').modal('hide');
     });
 
     //Botones
@@ -117,7 +117,7 @@ $(document).ready(function () {
         let apellido = $(this).closest('tr').find('td:eq(1)').text();
         let edad = parseInt($(this).closest('tr').find('td:eq(2)').text());
         let direccion = ($(this).closest('tr').find('td:eq(3)').text());
-        let telefono = ($(this).closest('tr').find('td:eq(4)').text());
+        let telefono = parseInt ($(this).closest('tr').find('td:eq(4)').text());
         let curp = ($(this).closest('tr').find('td:eq(5)').text());
         let estatus = ($(this).closest('tr').find('td:eq(6)').text());
         
