@@ -19,18 +19,18 @@
     <h1>Preinscripcion</h1>
     <h2>Datos del aspirante</h2>
 
-    <form>
+    <form id="formulario">
       <div class="col-2">
         <label>
           Nombres:
-          <input id="nombre" placeholder="Ingresar Nombres" pattern="[A-Z ]+" required=""
+          <input id="nombre" placeholder="Ingresar Nombres" pattern="[A-Z ]+" required
             onkeyup="this.value = this.value.toUpperCase();" tabindex="1">
         </label>
       </div>
       <div class="col-2">
         <label>
           Apellidos
-          <input id="apellido" placeholder="Ingresar Apellidos" pattern="[A-Z ]+" required=""
+          <input id="apellido" placeholder="Ingresar Apellidos" pattern="[A-Z ]+" required
             onkeyup="this.value = this.value.toUpperCase();" tabindex="2">
         </label>
       </div>
@@ -38,21 +38,20 @@
       <div class="col-3">
         <label>
           Edad
-          <input id="edad" type="number" placeholder="Ingresar Edad" min="1" max="100" required="" tabindex="3">
+          <input id="edad" type="number" placeholder="Ingresar Edad" min="1" max="100" required tabindex="3">
         </label>
       </div>
       <div class="col-3">
         <label>
           Direccion
           <input id="direccion" placeholder="Ingresar Dirección" onkeyup="this.value = this.value.toUpperCase();"
-            required="" tabindex="4">
+            required tabindex="4">
         </label>
       </div>
       <div class="col-3">
         <label>
           Telefono
-          <input id="telefono"  type=" text" placeholder="Ingresar Telefono" pattern="[0-9]{10}" required=""
-            tabindex="4">
+          <input id="telefono" type=" text" placeholder="Ingresar Telefono" pattern="[0-9]{10}" required tabindex="4">
         </label>
       </div>
 
@@ -62,26 +61,26 @@
           CURP
           <input id="curp" type="text" placeholder="Ingresar Curp" onkeyup="this.value = this.value.toUpperCase();"
             pattern="([A-Z]{4}([0-9]{2})(0[1-9]|1[0-2])(0[1-9]|1[0-9]|2[0-9]|3[0-1])[HM](AS|BC|BS|CC|CL|CM|CS|CH|DF|DG|GT|GR|HG|JC|MC|MN|MS|NT|NL|OC|PL|QT|QR|SP|SL|SR|TC|TS|TL|VZ|YN|ZS|NE)[A-Z]{3}[0-9A-Z]\d)"
-            required="" tabindex="6">
+            required tabindex="6">
         </label>
       </div>
       <div class="col-4">
         <label>
           FECHA DE REGISTRO
-          <input id="fecha" type="date" placeholder="Ingresar Fecha de Registro" required="" tabindex="7">
+          <input id="fecha" type="date" placeholder="Ingresar Fecha de Registro" required tabindex="7">
         </label>
       </div>
       <div class="col-4">
         <label>
           TUTOR
-          <input id="tutor" placeholder="Ingresar Nombre del Tutor" pattern="[A-Z ]+" required=""
+          <input id="tutor" placeholder="Ingresar Nombre del Tutor" pattern="[A-Z ]+" required
             onkeyup="this.value = this.value.toUpperCase();" tabindex="7">
         </label>
       </div>
       <button class="boton" id="btnRegistrar">Registrar</button>
-      </div>
+  </div>
 
-    </form>
+  </form>
   </div>
   <script type="text/javascript">
     var elems = Array.prototype.slice.call(document.querySelectorAll('.js-switch'));

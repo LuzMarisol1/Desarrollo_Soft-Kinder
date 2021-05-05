@@ -10,9 +10,12 @@ var enviarData = document.getElementById('btnRegistrar');
 
 var dataBD = firebase.database().ref('preinscripcion').push();
 enviarData.addEventListener('click', preinscripcion);
-function preinscripcion() {
 
-    if(nombre.value!="" && apellido.value!="" && edad.value!="" && direccion.value!="" && telefono.value!="" && curp.value!="" && fecha.value!="" && tutor.value!=""){
+function preinscripcion() {
+    var formulario = document.getElementById('formulario');
+    console.log(formulario.checkValidity());
+
+    if(formulario.checkValidity() != false){
         dataBD.set({
             clave: dataBD.getKey(),
             nombre: nombre.value,
@@ -25,10 +28,9 @@ function preinscripcion() {
             tutor: tutor.value,
         });
         alert("Registrado correctamente");
-        location.href="/education/index.html";
-    }else{
-        alert("Error: Algunos campos se encuentran vacios");
+        location.href="/education/index.html"
+        }else{
+        alert("El formulario no esta correctamente llenado");
     }
-   
     
 }

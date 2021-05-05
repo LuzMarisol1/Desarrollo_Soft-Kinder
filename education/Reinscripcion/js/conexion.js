@@ -1,4 +1,4 @@
-window.onload = inicializar;
+ window.onload = inicializar;
 
 var nombre = document.getElementById('nombre');
 var apellido = document.getElementById('apellido');
@@ -15,7 +15,10 @@ enviarData.addEventListener('click', reinscripcion);
 var storageRef;
 
 function reinscripcion() {
-    if (nombre.value != "" && apellido.value != "" && edad.value != "" && direccion.value != "" && boleta.value != "") {
+    var formulario2 = document.getElementById('formulario2');
+    console.log(formulario2.checkValidity());
+
+    if(formulario2.checkValidity() != false){
         dataBD.set({
             clave: dataBD.getKey(),
             nombre: nombre.value,
@@ -24,11 +27,12 @@ function reinscripcion() {
             direccion: direccion.value,
             grado: grado.value,
             boleta: boleta.files[0].name,
-        })
-        alert("Registrado correctamente");
+        });
         location.href="/education/index.html";
+        alert("Registrado correctamente");
+       
     } else {
-        alert("Error: Algunos campos se encuentran vacios");
+        alert("El formulario no esta correctamente llenado");
     }
 }
 
