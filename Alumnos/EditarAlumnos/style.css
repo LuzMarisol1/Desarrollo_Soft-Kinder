@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(ilustracion-dibujos-animados-juegos-infantiles-personajes-ninos-preescolar-multinacionales_33099-1034.jpg);
+    background-size: cover;
+    color: black;
+    font-family: 'calibri';
+    margin: auto;
+    background-color:white;
+}
+
+title {
+    font-family: 'Times New Roman';
+    color: black;
+    text-align: center;
+    font-size: 30px;
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+    margin-top: 20px;
+
+}
+.CENTRARTABLA{
+    width: 100%;
+    margin-left: -100px;
+}
+.table {
+    background-color: white;
+    text-align: left;
+    border-collapse: collapse;
+    font-weight: bold;
+    font-family: "Arial";
+    font-size: 15px;
+    width: 100%;
+    border-spacing: 5px;
+    align-content: center;
+   
+    
+    margin-top: 80px;
+    
+}
+
+.container {
+    margin-left: 280px;
+    margin-top: 80px;
+}
+.conte{
+    margin-top: 30px;
+    margin-left: 30px;
+}
+.conte a {
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    background:rgb(50, 59, 141);
+    padding: 8px 20px;
+    border-radius: 30px;
+    margin: 20px;
+    transition: background-color 1s;
+  }
+  
+.th {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 20px;
+}
+
+thead{ 
+    background-color: gray;
+    border-bottom: solid 5px;
+    color: white;
+}
+
+tr:nth-child(even){ 
+    background-color: #ddd;
+}
+
+tr:hover td{ 
+    background-color: #70cff5;
+    color: white;
+}
