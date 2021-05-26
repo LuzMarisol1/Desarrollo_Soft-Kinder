@@ -1,0 +1,58 @@
+body {
+   background-image: url('kinder-dibujos-animados-ninos-parque-infantil-ventana_33099-662.jpg');
+   background-size: cover;
+
+}
+
+h1{ 
+    font-family:"Impact";
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    
+}
+
+.table {
+    background-color: white;
+    text-align: left;
+    border-collapse: collapse;
+    font-weight: bold;
+    font-family: "Arial";
+    font-size: 15px;
+    width: 100%;
+    border-spacing: 5px;
+    align-content: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 80px;
+    
+}
+
+.th {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 20px;
+}
+
+thead{ 
+    background-color: gray;
+    border-bottom: solid 5px;
+    color: white;
+}
+
+tr:nth-child(even){ 
+    background-color: #ddd;
+}
+
+tr:hover td{ 
+    background-color: #70cff5;
+    color: white;
+}
