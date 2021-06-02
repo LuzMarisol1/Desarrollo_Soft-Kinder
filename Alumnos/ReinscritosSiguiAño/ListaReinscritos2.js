@@ -31,6 +31,7 @@ firebase.database().ref("reinscripcion").once('value').then(function (snapshot) 
         
 
        if(data[k].grado == "2° Grado"){
+           if(data[k].estatus == "Aceptado" ){
         reinscrito += ' <tr >';
         reinscrito += ' <td >';
         reinscrito += data[k].nombre + '</td>';
@@ -43,7 +44,7 @@ firebase.database().ref("reinscripcion").once('value').then(function (snapshot) 
 
         reinscrito += '<td>';
         reinscrito += data[k].grado + '</td>';
-        
+           }
        }
         
     }

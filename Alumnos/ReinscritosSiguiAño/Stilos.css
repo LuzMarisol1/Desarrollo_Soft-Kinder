@@ -1,5 +1,5 @@
 body {
-    background-image: url('images.jpg');
+    background-image: url('2248.jpg');
  
  }
  h1{ 
@@ -35,4 +35,18 @@ p{
     padding: 10px;
     margin: 10px;
 
+  }
+  .conte{
+    margin-top: 50px;
+    margin-left: 50px;
+}
+.conte a {
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    background:rgb(50, 59, 141);
+    padding: 8px 20px;
+    border-radius: 30px;
+    margin: 20px;
+    transition: background-color 1s;
   }

@@ -6,7 +6,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/3.7.5/firebase.js"></script>
-  <title>Lista Aceptados</title>
+  <title class="TERE">Niños que ingresan a 2° </title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/3.7.5/firebase.js"></script>
   <link rel="stylesheet" href="Stilos.css">
@@ -16,23 +16,33 @@
 </head>
 
 <body>
-  <input type="button" value="Descargar PDF" onclick="window.print()">
-    <div class="conte">
-        <a href="IndexRePrevius.html">Volver</a>
-    </div>
-  <h1>Lista de niños que ingresan a 2° año de kinder</h1>
-  <div class="container"></div>
-  <script>
-    var boton = document.getElementById("regresar");
-    boton.addEventListener("click",function(){
+  <div class="conte">
+    <a href="/Administrador/index.html">Volver</a>
+</div> 
+<p>
 
-    },false);
-</script>
-</div>
+</p>
+
+ <div><input id="btn1" type="button" value="Descargar PDF" onclick="window.print()"> 
+  
+  <style type="text/css" media="print">
+    @media print {
+    .title{display:none;}
+    #btn1 {display:none;}
+    .conte{display:none;}
+    #search {display:none;}
+    }
+    </style>
+ </div>
+  <h1>Niños Aceptados Que Ingresan a 2° Año</h1>
   <body>
     <article id="caja">
       <section>
-        <table style="width:60%" class="table">
+        <div class="form-group">
+          <input type="text" class="form-control pull-right" style="width:20%" id="search" placeholder="Busca en aquí">
+         </div>
+         <table class="table-bordered table pull-right" id="mytable" cellspacing="0" style="width:90%;">
+          <thead>
           <thead>
             <tr id="tr">
               
@@ -51,6 +61,22 @@
       </tbody>
     </article>
   </body>
+  <script>
+    // Write on keyup event of keyword input element
+    $(document).ready(function(){
+    $("#search").keyup(function(){
+    _this = this;
+    // Show only matching TR, hide rest of them
+    $.each($("#mytable tbody tr"), function() {
+    if($(this).text().toLowerCase().indexOf($(_this).val().toLowerCase()) === -1)
+    $(this).hide();
+    else
+    $(this).show();
+    });
+    });
+   });
+   </script>
+
 <script src="ListaReinscritos2.js">
 
 </script>
