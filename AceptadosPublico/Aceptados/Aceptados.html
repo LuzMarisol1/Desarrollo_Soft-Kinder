@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.7.5/firebase.js"></script>
+  <title>Lista Aceptados</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.7.5/firebase.js"></script>
+  <link rel="stylesheet" href="Aceptados.css">
+  <!--<script src="/Contacto/Administrador/tabla.js"></script> -->
+<!-- jQuery library -->
+<script src="js/jquery.min.js"></script>
+
+<!-- jsPDF library -->
+<script src="js/jsPDF/dist/jspdf.min.js"></script>
+</head>
+
+<body>
+  <div class="conte">
+    <a href="/education/Listas.html">Volver</a>
+</div> 
+
+  <h1>Lista de Niños Aceptados en Preinscripcion</h1>
+  <body>
+    <article id="caja">
+      <section>
+        <div class="form-group">
+          <input type="text" class="form-control pull-right" style="width:20%" id="search" placeholder="Busca en aquí">
+         </div>
+         <table class="table-bordered table pull-right" id="mytable" cellspacing="0" style="width:90%;">
+          <thead>
+          <thead>
+            <tr id="tr">
+              
+              <th>Nombre</th>
+              <th>Apellidos</th>
+              <th>Años de Edad</th>
+              <th>Estatus</th>
+            </tr>
+            <tr>
+            <tr>
+            </tr>
+          </thead>
+          <tbody id="tabla">
+        </table>
+      </section>
+      </tbody>
+    </article>
+  </div>
+  </body>
+  <script>
+    // Write on keyup event of keyword input element
+    $(document).ready(function(){
+    $("#search").keyup(function(){
+    _this = this;
+    // Show only matching TR, hide rest of them
+    $.each($("#mytable tbody tr"), function() {
+    if($(this).text().toLowerCase().indexOf($(_this).val().toLowerCase()) === -1)
+    $(this).hide();
+    else
+    $(this).show();
+    });
+    });
+   });
+   </script>
+
+<script src="Aceptados.js"></script>
+
+</html>
