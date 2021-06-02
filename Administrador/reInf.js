@@ -101,7 +101,7 @@ $(document).ready(function () {
         $('#edad').val(edad);
         $('#direccion').val(direccion);
         $('#grado').val(grado);
-        $('#estatus').val('');
+        $('#estatus').val(estatus);
         $("form").trigger("reset");
         $('#modalAltaEdicion').modal('show');
     });
@@ -121,7 +121,7 @@ $(document).ready(function () {
         $('#apellido').val(apellido);
         $('#edad').val(edad);
         $('#direccion').val(direccion);
-        $('#grado').val('');
+        $('#grado').val(grado);
         $('#estatus').val(estatus);
         $('#modalAltaEdicion').modal('show');
     });

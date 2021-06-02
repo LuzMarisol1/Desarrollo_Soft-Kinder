@@ -98,7 +98,7 @@ $(document).ready(function () {
         coleccionProductos.update(actualizacionData);
         id = '';
         $("form").trigger("reset");
-        $('#modal1').modal('hide');
+        $('#modalAltaEdicion').modal('hide');
     });
 
     //Botones

@@ -1,5 +1,5 @@
 body {
-   background-image: url('kinder-dibujos-animados-ninos-parque-infantil-ventana_33099-662.jpg');
+   background-image: url('2250.jpg');
    background-size: cover;
 
 }
@@ -56,3 +56,20 @@ tr:hover td{
     background-color: #70cff5;
     color: white;
 }
+.conte{
+    margin-top: 50px;
+    margin-left: 50px;
+}
+.conte a {
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    background:rgb(50, 59, 141);
+    padding: 8px 20px;
+    border-radius: 30px;
+    margin: 20px;
+    transition: background-color 1s;
+  }
+
+  
+   
